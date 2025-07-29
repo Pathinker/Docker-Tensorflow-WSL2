@@ -2,7 +2,7 @@
 
 {
   "name": "tensor",
-  "image": "docker-tensorflow-wsl2:1.0",
+  "image": "pathinker/docker-tensorflow-wsl2:2.17.0",
   "remoteUser": "root",
   "runArgs": [
     "-it",
