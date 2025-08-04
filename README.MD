@@ -110,7 +110,7 @@ Docker is a tool to isolate virtual environments such Conda but giving more vers
 Docker could be taken even further with the <b>Dev Container</b> extension which enable to export Docker to the Visual Studio Code IDE and even incorporated more custom settings such other extensions or personal QoS (Quality of Service) settings and their benefits compared virtual machines is the reuse of the kernel of the operative meanwhile the isolation between every single docker instance persist this allow to have an increased resource optimization and with other qualities from <b>Docker Compose</b> and <b>Docker Swarm</b> give productive software the ability to scale and adapt to requirements and demand.
 </p>
 
-https://github.com/user-attachments/assets/daefe94e-92b7-47dd-845a-f9ecf82d98fd
+https://github.com/user-attachments/assets/fc03ff05-4119-4dcc-9d09-b0900088cdf2
 
 ## $${\color{orange}Docker \space Process}$$
 
@@ -118,7 +118,7 @@ https://github.com/user-attachments/assets/daefe94e-92b7-47dd-845a-f9ecf82d98fd
 Docker takes multiples stages to concrete and create the virtual enviroments being Dockerfile, Image and Container.
 </p>
 
-https://github.com/user-attachments/assets/4afe248a-0230-4024-8d72-923f62de40d1
+https://github.com/user-attachments/assets/9f1a47e9-2737-4652-a91a-f8758c621232
 
 ### $${\color{lightskyblue}Dockerfile}$$
 
