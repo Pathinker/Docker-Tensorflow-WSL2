@@ -1,5 +1,8 @@
 # Docker Tensorflow WSL2
 
+[![EN](https://img.shields.io/badge/EN-English-blue?style=for-the-badge)](https://github.com/Pathinker/Docker-Tensorflow-WSL2/blob/main/README.MD)
+[![ES](https://img.shields.io/badge/ES-Español-red?style=for-the-badge)](https://github.com/Pathinker/Docker-Tensorflow-WSL2/blob/main/README.ES.MD)
+
 <p align="justify">    
 Tensorflow has multiple issues enabling GPU support training or inference from their models, usually using a graphic or tensorial unit reduces by 10 times or more the running time.
 </p>
@@ -18,7 +21,7 @@ In this case is explained how to properly install and manage the WSL2 to enable 
   - $${\color{orange}1.- \space Docker \space Desktop}$$
   - $${\color{orange}2.- \space WSL2}$$
   - $${\color{orange}3.- \space Nvidia \space Container \space Toolkit}$$
-  - $${\color{orange}4.- \space Verify \space Docker \space Docker \space Installation}$$
+  - $${\color{orange}4.- \space Verify \space Docker \space Installation}$$
 - Docker Explanation
   - $${\color{royalblue}Animation}$$
   - $${\color{orange}Docker \space Process}$$
@@ -37,13 +40,13 @@ In this case is explained how to properly install and manage the WSL2 to enable 
 # How to Install
 
 <p align="justify">
-In order to execute and replicate the results the project was virtualized through docker being necessary only to install the tools to manage the virtual environment, also a dev container was made for visual studio code requiring less commands and a more friendly IDE to test and play on.
+In order to execute and replicate the results the project was virtualized through Docker being necessary only to install the tools to manage the virtual environment, also a dev container was made for visual studio code requiring less commands and a more friendly IDE to test and play on.
 </p>
 
 ## $${\color{orange}1.- \space Docker \space Desktop}$$
 
 <p align="justify">
-Download and procced a to install <a href = "https://www.docker.com"> docker desktop </a> from the official website, once done enable the WSL2 connectivity currently on "<b>General</b>" and click on "<b>Use the WSL2 based engine</b>" or similar.
+Download and procced a to install <a href = "https://www.docker.com"> Docker desktop </a> from the official website, once done enable the WSL2 connectivity currently on "<b>General</b>" and click on "<b>Use the WSL2 based engine</b>" or similar.
 </p>
 
 ## $${\color{orange}2.- \space WSL2}$$
@@ -53,19 +56,21 @@ Download and procced a to install <a href = "https://www.docker.com"> docker des
 WSL2 is the windows subsystem for Linux, this will allow to integrate and use the kernel of many Linux distributions without need of virtual machine and being native on windows, to open it you must do the following path:
 </p>
 
-- Enable "**Virtual Machine Platform**" on windows features, could be found in "**Turn Windows features on or off**"
+- Enable "**Virtual Machine Platform**" and "**Windows Subsystem for Linux**" on windows features, could be found in "**Turn Windows features on or off**"
 - Open windows PowerShell as an admin, then write "**wsl --install**"
-- Write and login on Ubuntu distribution as a new user, then write "**sudo apt update && sudo apt upgrade -y**" to download all updates.
+- Login on Ubuntu distribution as a new user, then write "**sudo apt update && sudo apt upgrade -y**" to download all updates.
 
 More information on <a href = "https://learn.microsoft.com/en-us/windows/wsl/install"> Microsoft </a> official website.
 
 ## $${\color{orange}3.- \space Nvidia \space Container \space Toolkit}$$
 
 <p align="justify">
-Nvidia Container Toolkit allows the containers made by Docker the use of all graphic cards naturally this gives the support for tensorflow to utilize a GPU on training models, however is also need it to use nvidia cuda platform to write parallel code and run it on the graphic card, this feature is applied with pycuda to makes faster the exploitation process of the metaheuristic algorithm.
+Nvidia Container Toolkit allows the containers made by Docker the use of all graphic cards.
 </p>
 
-Copy the following commands to download and install the files in the end restart the system.
+<p align="justify">
+Copy the following commands to download and install the files in the end restart the Docker engine.
+</p>
 
 ```
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -88,10 +93,10 @@ sudo apt-get install -y nvidia-container-toolkit
 
 More information on <a href = "https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html"> Nvidia </a> official website.
 
-## $${\color{orange}4.- \space Verify \space Docker \space Docker \space Installation}$$
+## $${\color{orange}4.- \space Verify \space Docker \space Installation}$$
 
-- Go to the ubuntu distribution download on WSL2 and type "**```docker --version```**" if everything is all right you should see the current version of docker you got on your system.
-- Run the next docker image "**```docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi```**" if you see your GPU, Drivers and Cuda version everything was installed correct.
+- Go to the Ubuntu distribution download on WSL2 and type "**```docker --version```**" if everything is all right you should see the current version of Docker you got on your system.
+- Run the next Docker image "**```docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi```**" if you see your GPU, Drivers and Cuda version everything was installed correct.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c1109a57-f7b6-4b87-98f8-50d7c4c668fe" alt="image">
@@ -107,7 +112,7 @@ Docker is a tool to isolate virtual environments such Conda but giving more vers
 > At science and research environment it is significant to replicate the same experimental results.
 
 <p align="justify">
-Docker could be taken even further with the <b>Dev Container</b> extension which enable to export Docker to the Visual Studio Code IDE and even incorporated more custom settings such other extensions or personal QoS (Quality of Service) settings and their benefits compared virtual machines is the reuse of the kernel of the operative meanwhile the isolation between every single docker instance persist this allow to have an increased resource optimization and with other qualities from <b>Docker Compose</b> and <b>Docker Swarm</b> give productive software the ability to scale and adapt to requirements and demand.
+Docker could be taken even further with the <b>Dev Container</b> extension which enable to export Docker to the Visual Studio Code IDE and even incorporated more custom settings such other extensions or personal QoS (Quality of Service) settings and their benefits compared virtual machines is the reuse of the kernel of the operative meanwhile the isolation between every single Docker instance persist this allow to have an increased resource optimization and with other qualities from <b>Docker Compose</b> and <b>Docker Swarm</b> give productive software the ability to scale and adapt to requirements and demand.
 </p>
 
 https://github.com/user-attachments/assets/fc03ff05-4119-4dcc-9d09-b0900088cdf2
@@ -126,21 +131,22 @@ https://github.com/user-attachments/assets/9f1a47e9-2737-4652-a91a-f8758c621232
   Details all the setup instructions with the following keywords:
 </p>
 
-  - **FROM:** Written at the begging inherit configurations from a previous Docker Image found at Docker Hub, this save time reduce the docker file size and complexity, it is possible to make multiples FROM through a process called Multistage.
+  - **FROM:** Written at the begging inherit configurations from a previous Docker Image found at Docker Hub, this save time reduce the Docker file size and complexity, it is possible to make multiples FROM through a process called [Multistage](https://github.com/Pathinker/Docker-Tensorflow-WSL2/tree/main/.docker).
   - **WORKDIR:** Specifies the working directory in which all copy and data would be redirected.
   - **COPY:** Copies files between host and the virtual environment.
   - **RUN:** Allow to execute terminal commands such sudo update, upgrade or pip install.
   - **CMD:** Gives a predetermined routine when the environment is launched.
-  - **EXPOUSE:** Enables a port to be used, for example 8888 with Jupyter Lab
+  - **EXPOUSE:** Enables a port to be used, for example 8888 for Jupyter Lab.
 
 ### $${\color{lightskyblue}Docker \space Image}$$
 
 <p align="justify">
 Contain each and every single configuration from the Dockefile ready to run the virtual enviroment the image need to have an specific name with the following parts "user/proyect-name:tag":
 </p>
-  - user: Optional indicates the belong and user that created the image, it is need it when an image is uploaded to the cloud on Docker Hub to be used download from more users.
-  - proyect-name: Encanpsulates the name of the repository.
-  - tag: Specifies the purpouse or related information of their quialities.
+
+  - **user:** Optional, indicates the belong and user that created the image, it is need it when an image is uploaded to the cloud on Docker Hub to be used and download from more users.
+  - **proyect-name:** Encanpsulates the name of the repository.
+  - **tag:** Specifies the purpouse or related information of their qualities.
 
 The image is obtained with the following comand.
 
@@ -162,30 +168,30 @@ https://github.com/user-attachments/assets/a3312a95-f922-4f9d-87ea-147b63ca3ddf
 To run a container it is need it a couple of parameters
 
 ```
-docker run -it --rm --gpus all -v {absolute-direction-host-machine:WORKDIR} --name {name-you-want-to-give-to-the-container} {docker image name}
+docker run -it --rm --gpus all -v {absolute-direction-host-machine:WORKDIR} --name {name-you-want-to-give-to-the-container} {docker-image-name}
 ```
 
-- **it:** Allows and interactive terminal, it will allow to show feedback and logs from the terminal.
+- **it:** Allows and interactive terminal, it will be able to show feedback and logs from the terminal.
 - **rm:** Removes the container once it is close.
-- **gpus all:** Gives access to the container all the GPUs on your device using Docker Container Toolkit
+- **gpus all:** Gives access to the container all the GPUs on your device using Nvidia Container Toolkit.
 - **v {absolute-direction-host-machine:WORKDIR}:** Creates a volume with the host machine in a specific folder, this makes it possible to storage any updated and created data through a container execution.
 - **name:** Names the container.
 
 >[!TIP]
-> To run directly to the terminal and avoid the entrypoint or CMD instruction from de Dockerfile and Docker Image add "/bin/bash" to the end of the command "docker run -it ... /bin/bash".
+> To run directly to the terminal and avoid the entrypoint or CMD instruction from de Dockerfile and Docker Image, add "/bin/bash" to the end of the command "docker run -it ... /bin/bash".
 
 https://github.com/user-attachments/assets/320895dc-a319-40eb-9ebc-47f5c833d2bb
 
 # Run Proyect (Choose Environment)
 
 <p align="justify">
-Now you have two options to run the code, one being run it on the native WSL2 ubuntu terminal which is already installed or add one extension on visual studio to get a more comfortable develop environment.
+Now you have two options to run the code, one being run it on the native WSL2 Ubuntu terminal which is already installed or add one extension on Visual Studio Code to get a more comfortable develop environment.
 </p>
 
 ## $${\color{orange}Ubuntu \space Terminal}$$
 
 <p align="justify">
-Run the next command and wait around 30 minutes for the docker image to be fully downloaded, <b>this will allow you to access the training results</b>.
+Run the next command and wait around 30 minutes for the Docker image to be fully downloaded.
 </p>
 
 ```
@@ -202,7 +208,7 @@ For now, you will need to write python3 and the complete route of files to execu
 ## $${\color{orange}Visual \space Studio \space Code \space (DevContainer)}$$
 
 <p align="justify">
-To run it on Visual Studio Code you will need to search for extensions and type "<b><a href = "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers</a></b>" from Microsoft, wait until it is fully operational and then do the next shortcut "<b>Ctrl + Shift + P</b>", write and click on "<b>>Dev Containers: Rebuild and Reopen in Container</b>". Afterwards you will need to wait around the same time of the ubuntu terminal setup.
+To run it on Visual Studio Code you will need to search for extensions and type "<b><a href = "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers</a></b>" from Microsoft, wait until it is fully operational and then do the next shortcut "<b>Ctrl + Shift + P</b>", write and click on "<b>>Dev Containers: Rebuild and Reopen in Container</b>". Afterwards you will need to wait around the same time of the Ubuntu terminal setup.
 </p>
 
 <p align="center">

@@ -1,5 +1,8 @@
 # Docker Multistage
 
+[![EN](https://img.shields.io/badge/EN-English-blue?style=for-the-badge)](https://github.com/Pathinker/Docker-Tensorflow-WSL2/blob/main/.docker/README.MD)
+[![ES](https://img.shields.io/badge/ES-Español-red?style=for-the-badge)](https://github.com/Pathinker/Docker-Tensorflow-WSL2/blob/main/.docker/README.ES.MD)
+
 <p align="justify">
 Docker gives the capacity to load multiple configurations from images, this is done to save time and lines to write the specific configurations, to make this possible each FROM that is typed to call an image is a single stage. Where the image is built and natively is given a natural number to each stage starting with 0 but giving a name is also possible.
 </p>
@@ -9,6 +12,6 @@ After that it is only necessary to copy the specific configuration from the dire
 </p>
 
 >[!Warning]
-> This process is only done when the image from tensorflow does not have the correct CUDA and cuDNN versions that need to detect and give support to GPU.
+> This process is only done when the image from tensorflow does not have the correct Cuda and cuDNN versions that need to detect and give support to GPU.
 
 https://github.com/user-attachments/assets/944c2d9e-a2c0-4624-9c9d-d9f1dfa0f612
