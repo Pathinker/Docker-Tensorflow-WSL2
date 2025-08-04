@@ -102,7 +102,7 @@ Más información en sitio oficial de <a href = "https://docs.nvidia.com/datacen
   <img src="https://github.com/user-attachments/assets/c1109a57-f7b6-4b87-98f8-50d7c4c668fe" alt="image">
 </p>
 
-# Docker Explanation
+# Docker Explicación
 
 <p align="justify">
 Docker es una herramienta que permite aislar entornos virtuales al igual que Conda pero brindando una mayor versatilidad y compatibilidad entre computadores, esto significa que cada ordenador ejecutara de la misma manera lo que fue configurado usando Docker, brindando una mejor calidad de vida al software y en este caso particular te permitirá disponer de múltiples personas trabajando en el mismo proyecto sin ningún problema de compatibilidad de versiones al incorporar un nuevo dispositivo al trabajo, además de brindar reproducibilidad al software.
